@@ -35,3 +35,14 @@ function show() {
     buttons[i].addEventListener('click', remove)
   }
 }
+
+function remove() {
+  var id = this.gerAttribute('id')
+  var todos = getTodos
+  todos.splice(id, 1)
+  localStorage.setItem('todo', JSON.stringify(todos))
+
+  show()
+
+  return false
+}
