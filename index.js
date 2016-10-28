@@ -46,3 +46,6 @@ function remove() {
 
   return false
 }
+
+document.getElementById('add').addEventListener('click', add)
+show()
