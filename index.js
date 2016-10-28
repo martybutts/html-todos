@@ -6,3 +6,15 @@ function getTodos() {
   }
   return todos
 }
+
+function add() {
+  var task = document.getElementById('task').value
+
+  var todos = getTodos()
+  todos.push(task)
+  localStorage.setItem('todo', JSON.stringify(todos))
+
+  show()
+
+  return false
+}
